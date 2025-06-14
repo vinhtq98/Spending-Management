@@ -92,4 +92,8 @@ dependencies {
 
     //calendar
     implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
+
+    //mp char
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
 }
