@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginVertical="@dimen/_4sdp"
+    android:padding="@dimen/_12sdp"
+    android:background="@drawable/bg_item_categories_inactive"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imvCategories"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_food"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/color_neutral_1"
+        android:id="@+id/tvName"
+        android:fontFamily="@font/google_sans_medium"
+        app:layout_constraintTop_toTopOf="@id/imvCategories"
+        app:layout_constraintBottom_toBottomOf="@id/imvCategories"
+        app:layout_constraintStart_toEndOf="@id/imvCategories"
+        android:layout_marginStart="@dimen/_6sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/color_neutral_3"
+        android:id="@+id/tvNote"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="@font/google_sans_medium"
+        app:layout_constraintEnd_toStartOf="@id/tvExpense"
+        app:layout_constraintTop_toTopOf="@id/imvCategories"
+        app:layout_constraintBottom_toBottomOf="@id/imvCategories"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        android:layout_marginStart="@dimen/_6sdp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/color_neutral_1"
+        android:id="@+id/tvExpense"
+        android:fontFamily="@font/google_sans_medium"
+        app:layout_constraintTop_toTopOf="@id/imvCategories"
+        app:layout_constraintBottom_toBottomOf="@id/imvCategories"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_6sdp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingHorizontal="@dimen/_12sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMoneyNote"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:fontFamily="@font/google_sans_bold"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/color_neutral_1"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlCompat" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvExpense"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_medium"
+            android:text="@string/expense"
+            android:textColor="@color/color_neutral_1"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/edtExpense"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtExpense" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtExpense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:background="@drawable/bg_item_input"
+            android:fontFamily="@font/google_sans_medium"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:maxLength="15"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/color_neutral_1"
+            android:textColorHint="@color/color_neutral_3"
+            app:layout_constraintEnd_toStartOf="@id/tvDollar"
+            app:layout_constraintStart_toEndOf="@id/tvExpense"
+            app:layout_constraintTop_toBottomOf="@id/tvMoneyNote" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_medium"
+            android:text="$"
+            android:textColor="@color/color_neutral_1"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/edtExpense"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtExpense" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNote"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_medium"
+            android:text="@string/note"
+            android:textColor="@color/color_neutral_1"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/edtNote"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtNote" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_item_input"
+            android:fontFamily="@font/google_sans_medium"
+            android:hint="@string/enter_here"
+            android:inputType="text"
+            android:maxLength="100"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/color_neutral_1"
+            android:textColorHint="@color/color_neutral_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvExpense"
+            app:layout_constraintTop_toBottomOf="@id/edtExpense" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDay"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/google_sans_medium"
+            android:text="@string/day"
+            android:textColor="@color/color_neutral_1"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tvDatePicker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvDatePicker" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDatePicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@drawable/bg_item_input"
+            android:fontFamily="@font/google_sans_medium"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_10sdp"
+            android:textColor="@color/color_neutral_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvExpense"
+            app:layout_constraintTop_toBottomOf="@id/edtNote" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvCalendar"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@drawable/ic_calendar"
+            app:layout_constraintBottom_toBottomOf="@id/tvDatePicker"
+            app:layout_constraintEnd_toEndOf="@id/tvDatePicker"
+            app:layout_constraintTop_toTopOf="@id/tvDatePicker" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/google_sans_bold"
+            android:text="@string/categories"
+            android:textColor="@color/color_neutral_1"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDatePicker" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvCategories"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_categories"
+            android:paddingBottom="@dimen/_12sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/tvSubmit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCategories"
+            app:layout_constraintVertical_bias="0.0"
+            app:spanCount="4" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@drawable/bg_item_submit"
+            android:fontFamily="@font/google_sans_bold"
+            android:paddingVertical="@dimen/_8sdp"
+            android:text="@string/submit"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

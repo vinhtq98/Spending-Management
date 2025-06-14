@@ -6,18 +6,18 @@ plugins {
 }
 
 android {
-    namespace 'com.jrsoftware.template'
+    namespace 'com.jrsoftware.tool.spending.management'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.jrsoftware.template"
+        applicationId "com.jrsoftware.tool.spending.management"
         minSdk 24
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        versionCode 100
+        versionName "1.0.0"
 
         def formattedDate = new Date().format('MM.dd.yyyy')
-        archivesBaseName = "JrSoftware_${versionName}_v${versionCode}_${formattedDate}"
+        archivesBaseName = "Spending_management_${versionName}_v${versionCode}_${formattedDate}"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -84,4 +84,12 @@ dependencies {
     //sdp and ssp
     implementation 'com.intuit.sdp:sdp-android:1.1.1'
     implementation 'com.intuit.ssp:ssp-android:1.1.1'
+
+    implementation "androidx.room:room-runtime:2.6.1"
+    kapt "androidx.room:room-compiler:2.6.1"
+    // Nếu dùng Kotlin:
+    implementation "androidx.room:room-ktx:2.6.1"
+
+    //calendar
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
 }
